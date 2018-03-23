@@ -7,6 +7,9 @@ ENV VERSION="1.29.1695.84"
 RUN apk --no-cache add --update go git bzr wget py2-pip \ 
     gcc python python-dev musl-dev linux-headers libffi-dev openssl-dev \
     py-setuptools openssl procps ca-certificates openvpn 
+
+# Keep the time in sync
+RUN echo -e '#!/bin/sh\nntpd -d -q -n -p time.google.com' >> /etc/periodic/daily/do-ntp
     
 RUN pip install --upgrade pip 
 
