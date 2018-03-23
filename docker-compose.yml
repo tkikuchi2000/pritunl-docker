@@ -23,6 +23,8 @@ services:
       - "${PRITUNL_BIND_HTTPS_PORT}:443"
       - "${PRITUNL_BIND_OVPN_PORT}:1194/udp"
     privileged: true
+    environment:
+      - MONGODB_SERVER=mongo
     restart: always
 
 networks:
