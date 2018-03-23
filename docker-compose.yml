@@ -2,7 +2,7 @@ version: '3'
 services:
   mongo:
     container_name: mongo
-    image: mongo:3.2
+    image: mvertes/alpine-mongo:3.6.3-0
     networks:
       - pritunl
     ports:
