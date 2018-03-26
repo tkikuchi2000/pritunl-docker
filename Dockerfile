@@ -1,4 +1,4 @@
-FROM alpine:3.6
+FROM resin/raspberrypi3-alpine:3.6
 MAINTAINER Victor Trac <victor@cloudkite.io>
 
 ENV VERSION="1.29.1695.84"
