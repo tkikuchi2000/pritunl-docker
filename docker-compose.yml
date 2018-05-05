@@ -10,6 +10,10 @@ services:
     restart: always
     volumes:
       - ./data/db:/data/db
+      - ./data/bin:/data/bin
+    user: mongodb
+    command: [ "/data/bin/run.sh" ]
+    stop_signal: SIGTERM
   pritunl:
     container_name: pritunl
     build: .
