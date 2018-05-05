@@ -2,7 +2,7 @@ version: '3'
 services:
   mongo:
     container_name: mongo
-    image: andresvidal/rpi-mongodb3:latest
+    image: andresvidal/rpi3-mongodb3:latest
     networks:
       - pritunl
     ports:
