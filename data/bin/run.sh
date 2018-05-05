@@ -9,6 +9,11 @@ trap_sigterm() {
 }
 
 trap 'trap_sigterm' SIGTERM
+
+if [ -e /data/db/mongod.lock ]; then
+  mongod --repair
+fi
+
 nohup mongod &
 
 while true; do
